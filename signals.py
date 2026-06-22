@@ -1,11 +1,15 @@
-def sma_signal(df):
+def add_signal_column(df):
 
-    latest = df.iloc[-1]
+    df["Signal"] = "HOLD"
 
-    if latest["SMA20"] > latest["SMA50"]:
-        return "BUY"
+    df.loc[
+        df["SMA20"] > df["SMA50"],
+        "Signal"
+    ] = "BUY"
 
-    elif latest["SMA20"] < latest["SMA50"]:
-        return "SELL"
+    df.loc[
+        df["SMA20"] < df["SMA50"],
+        "Signal"
+    ] = "SELL"
 
-    return "HOLD"
+    return df
