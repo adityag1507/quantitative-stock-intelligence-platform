@@ -7,7 +7,6 @@ data = add_sma(data)
 data = add_rsi(data)
 data = add_macd(data)
 
-
 print(
     data[
         [
