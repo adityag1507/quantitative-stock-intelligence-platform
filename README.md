@@ -140,10 +140,10 @@ Backtested on AAPL with an initial capital of $10,000.
 | Metric           | Value      |
 | ---------------- | ---------- |
 | Initial Capital  | $10,000    |
-| Final Capital    | $11,645.72 |
-| Total Return     | 16.46%     |
+| Final Capital    | $11,580.61 |
+| Total Return     | 15.81%     |
 | Number of Trades | 5          |
-| Sharpe Ratio     | 0.90       |
+| Sharpe Ratio     | 0.87       |
 | Max Drawdown     | -16.40%    |
 | Win Rate         | 50%        |
 
