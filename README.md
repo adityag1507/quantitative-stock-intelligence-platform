@@ -92,27 +92,46 @@ This project is being built incrementally to simulate how real quantitative trad
 
 ## 🏗️ Architecture
 
-Yahoo Finance (yfinance)
-        │
-        ▼
-data_loader.py
-        │
-        ▼
-indicators.py
-(SMA, RSI, MACD)
-        │
-        ▼
-signals.py
-(BUY / SELL)
-        │
-        ▼
-backtester.py
-        │
-   ┌────┴────┬─────────┐
-   ▼         ▼         ▼
-risk.py  equity_curve.py
-          signal_chart.py
+## 🏗️ Architecture
 
+```text
+┌──────────────────────────────────────────────────┐
+│            Yahoo Finance (yfinance)               │
+│         Historical OHLCV Market Data              │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  data_loader.py                   │
+│          Fetch · Clean · Normalize                │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  indicators.py                    │
+│         SMA-20 · SMA-50 · RSI · MACD             │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                   signals.py                      │
+│           BUY / SELL Signal Detection             │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  backtester.py                    │
+│       Capital Tracking · Trade Simulation         │
+└──────────────────────┬───────────────────────────┘
+                       │
+              ┌────────┴────────┐
+              ▼                 ▼
+   ┌───────────────┐   ┌─────────────────────┐
+   │    risk.py    │   │  equity_curve.py     │
+   │ Sharpe · MDD  │   │  signal_chart.py     │
+   │  · Win Rate   │   │   Visualizations     │
+   └───────────────┘   └─────────────────────┘
+```
 
 ## 📊 Backtest Results
 
