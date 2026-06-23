@@ -92,8 +92,6 @@ This project is being built incrementally to simulate how real quantitative trad
 
 ## 🏗️ Architecture
 
-## 🏗️ Architecture
-
 ```text
 ┌──────────────────────────────────────────────────┐
 │            Yahoo Finance (yfinance)               │
