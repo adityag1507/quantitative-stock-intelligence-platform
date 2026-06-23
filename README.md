@@ -92,29 +92,42 @@ This project is being built incrementally to simulate how real quantitative trad
 
 ## 🏗️ Architecture
 
-```text
-Yahoo Finance Data
-          │
-          ▼
-    Data Loader
-          │
-          ▼
- Technical Indicators
-(SMA, RSI, MACD)
-          │
-          ▼
- Signal Generation
-(BUY / SELL)
-          │
-          ▼
- Backtesting Engine
-          │
-          ▼
- Risk Analytics
-          │
-          ▼
- Visualizations
-```
+┌──────────────────────────────────────────────────┐
+│            Yahoo Finance (yfinance)               │
+│         Historical OHLCV Market Data              │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  data_loader.py                   │
+│          Fetch · Clean · Normalize                │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  indicators.py                    │
+│         SMA-20 · SMA-50 · RSI · MACD             │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                   signals.py                      │
+│           BUY / SELL Signal Detection             │
+└──────────────────────┬───────────────────────────┘
+                       │
+                       ▼
+┌──────────────────────────────────────────────────┐
+│                  backtester.py                    │
+│       Capital Tracking · Trade Simulation         │
+└──────────────────────┬───────────────────────────┘
+                       │
+              ┌────────┴────────┐
+              ▼                 ▼
+   ┌───────────────┐   ┌─────────────────────┐
+   │    risk.py    │   │  equity_curve.py     │
+   │ Sharpe · MDD  │   │  signal_chart.py     │
+   │  · Win Rate   │   │   Visualizations     │
+   └───────────────┘   └─────────────────────┘
 
 ---
 
