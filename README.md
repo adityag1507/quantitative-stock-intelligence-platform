@@ -2,12 +2,12 @@
 
 **A modular Python framework for quantitative stock analysis, algorithmic signal generation, and strategy backtesting.**
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.x-150458?style=flat-square\&logo=pandas\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-1.x-013243?style=flat-square\&logo=numpy\&logoColor=white)
-![yFinance](https://img.shields.io/badge/yFinance-0.2%2B-6E40C9?style=flat-square)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-11557C?style=flat-square)
-![Status](https://img.shields.io/badge/Status-In%20Development-orange?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![yFinance](https://img.shields.io/badge/yFinance-6E40C9?style=flat-square)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)
+![Status](https://img.shields.io/badge/In%20Development-orange?style=flat-square)
 
 ---
 
